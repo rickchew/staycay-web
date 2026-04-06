@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Next.js Dev",
+      "runtimeExecutable": "/opt/homebrew/Cellar/node/24.8.0/bin/node",
+      "runtimeArgs": ["/opt/homebrew/bin/yarn", "dev"],
+      "port": 3000
+    }
+  ]
+}
