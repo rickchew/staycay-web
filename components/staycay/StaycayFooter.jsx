@@ -3,6 +3,7 @@ import StaycayLogo from "./StaycayLogo";
 
 const footerNav = [
   { href: "/", text: "Home" },
+  { href: "/about", text: "About" },
   { href: "/our-tiers", text: "Our Tiers" },
   { href: "/our-services", text: "Services" },
   { href: "/contact-us", text: "Contact" },

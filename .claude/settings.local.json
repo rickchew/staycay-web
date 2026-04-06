@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(/opt/homebrew/bin/gh auth:*)",
+      "Bash(/opt/homebrew/bin/gh repo:*)",
+      "Bash(ls -la /Users/hiro-rick/Projects/staycay-web/app/\\\\\\(homes\\\\\\)/)",
+      "Bash(ls -la \"/Users/hiro-rick/Projects/staycay-web/app/\\(homes\\)/\\(home-1\\)/\")",
+      "Bash(ls -la \"/Users/hiro-rick/Projects/staycay-web/app/\\(homes\\)/\\(home-1\\)/\\(main-demo\\)/\")",
+      "Bash(ls -la \"/Users/hiro-rick/Projects/staycay-web/app/\\(homes\\)/\\(home-1\\)/\\(main-demo\\)/main-multi-page/\")",
+      "Bash(ls -1 \"/Users/hiro-rick/Projects/staycay-web/app/\\(homes\\)/\")",
+      "Bash(ls -la /Users/hiro-rick/Projects/staycay-web/app/\\\\\\(contact\\\\\\)/)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(rm /Users/hiro-rick/Projects/staycay-web/.git/index.lock)",
+      "Bash(git push:*)",
+      "Bash(rm -f /Users/hiro-rick/Projects/staycay-web/.git/index.lock)",
+      "Bash(curl -s http://localhost:3000/about)",
+      "Bash(curl -s http://localhost:3000/our-tiers)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/about)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/our-tiers)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/our-services)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/contact-us)"
+    ]
+  }
+}

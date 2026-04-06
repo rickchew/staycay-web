@@ -1,6 +1,7 @@
 import Link from "next/link";
 import StaycayHeader from "@/components/staycay/StaycayHeader";
 import StaycayFooter from "@/components/staycay/StaycayFooter";
+import WhatsAppButton from "@/components/staycay/WhatsAppButton";
 
 export const metadata = {
   title: "Our Services — Staycay",
@@ -151,6 +152,7 @@ export default function OurServicesPage() {
         </section>
       </main>
       <StaycayFooter />
+      <WhatsAppButton />
     </div>
   );
 }

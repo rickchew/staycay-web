@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import StaycayHeader from "@/components/staycay/StaycayHeader";
 import StaycayFooter from "@/components/staycay/StaycayFooter";
+import WhatsAppButton from "@/components/staycay/WhatsAppButton";
 
 export const metadata = {
   title: "Our Tiers — Staycay",
@@ -167,6 +168,7 @@ export default function OurTiersPage() {
         </section>
       </main>
       <StaycayFooter />
+      <WhatsAppButton />
     </div>
   );
 }

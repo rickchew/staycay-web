@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import StaycayHeader from "@/components/staycay/StaycayHeader";
 import StaycayFooter from "@/components/staycay/StaycayFooter";
+import WhatsAppButton from "@/components/staycay/WhatsAppButton";
 
 const contactInfo = [
   {
@@ -249,6 +250,7 @@ export default function ContactPage() {
         </section>
       </main>
       <StaycayFooter />
+      <WhatsAppButton />
     </div>
   );
 }
