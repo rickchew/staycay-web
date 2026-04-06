@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import StaycayHeader from "@/components/staycay/StaycayHeader";
 import StaycayFooter from "@/components/staycay/StaycayFooter";
 
@@ -15,6 +16,7 @@ const tiers = [
     tag: "Elevated Luxury, Private Comfort",
     name: "Reserve",
     dark: true,
+    imgSeed: "staycay-reserve-detail",
     desc: [
       "Staycay Reserve is our premium tier — larger spaces, enhanced privacy, and elevated finishes. Every Reserve property is carefully selected and upgraded to meet higher design and operational standards.",
       "Ideal for guests seeking a more exclusive and luxurious short-stay environment.",
@@ -28,6 +30,7 @@ const tiers = [
     tag: "Design-Led, Modern Living",
     name: "Signature",
     dark: false,
+    imgSeed: "staycay-signature-detail",
     desc: [
       "Staycay Signature represents our core design philosophy — clean lines, warm neutrals, and thoughtfully curated interiors. Each unit is styled with a timeless aesthetic, offering comfort, calm, and a refined stay experience.",
       "Signature focuses on balance — elegant yet welcoming, premium yet comfortable.",
@@ -42,6 +45,7 @@ const tiers = [
     name: "Kidz",
     dark: false,
     kidz: true,
+    imgSeed: "staycay-kidz-detail",
     desc: [
       "Staycay Kidz is curated for families. These units are designed with comfort, safety, and practicality in mind — without compromising on style.",
       "Perfect for family stays, group trips, and parents seeking convenience and comfort.",
@@ -88,18 +92,15 @@ export default function OurTiersPage() {
                 <div className="row align-items-center" style={{ gap: "0 0" }}>
                   {/* Image col */}
                   <div className={`col-md-6 ${!isEven ? "order-md-2" : ""} mb-4 mb-md-0`}>
-                    <div
-                      style={{
-                        width: "100%",
-                        aspectRatio: "4/3",
-                        background: tier.dark
-                          ? "linear-gradient(160deg, #3A302A 0%, #2A2420 100%)"
-                          : tier.kidz
-                          ? "linear-gradient(160deg, #D4EDF5 0%, #A8CDD8 100%)"
-                          : "linear-gradient(160deg, #E8DDD3 0%, #C8B8A8 100%)",
-                      }}
-                      aria-label={`${tier.name} property interior — photo to be added`}
-                    />
+                    <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", overflow: "hidden" }}>
+                      <Image
+                        src={`https://picsum.photos/seed/${tier.imgSeed}/800/600`}
+                        alt={`Staycay ${tier.name} property interior`}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        sizes="50vw"
+                      />
+                    </div>
                   </div>
 
                   {/* Text col */}

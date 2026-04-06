@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -26,19 +27,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right — hero image placeholder */}
+      {/* Right — property photo */}
       <div className="sc-hero-right">
-        {/*
-          Replace the div below with an <Image> once property photos are available:
-          <Image src="/assets/images/staycay/hero.jpg" alt="Staycay Interior" fill style={{ objectFit: "cover" }} />
-        */}
-        <div
-          className="sc-hero-img-fill"
-          style={{
-            background:
-              "linear-gradient(135deg, #E8DDD3 0%, #D4C4B4 40%, #C4B0A0 100%)",
-          }}
-          aria-hidden="true"
+        {/* Replace src with actual Staycay hero property photo when ready */}
+        <Image
+          src="https://picsum.photos/seed/staycay-hero/1200/900"
+          alt="Staycay premium property interior"
+          fill
+          style={{ objectFit: "cover" }}
+          priority
+          sizes="56vw"
         />
       </div>
     </section>

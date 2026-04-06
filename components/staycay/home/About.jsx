@@ -1,19 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section className="sc-section sc-bg-light">
       <div className="container">
         <div className="sc-about-grid">
-          {/* Image placeholder */}
-          <div>
-            <div
-              className="sc-about-image"
-              style={{
-                background:
-                  "linear-gradient(160deg, #E8DDD3 0%, #D0C0B0 100%)",
-              }}
-              aria-label="Staycay property interior — photo to be added"
+          {/* Image */}
+          <div style={{ position: "relative" }}>
+            <Image
+              src="https://picsum.photos/seed/staycay-about/800/1000"
+              alt="Staycay managed property interior"
+              width={800}
+              height={1000}
+              style={{ width: "100%", height: "auto", aspectRatio: "4/5", objectFit: "cover" }}
             />
           </div>
 

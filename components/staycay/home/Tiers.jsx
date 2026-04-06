@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const tiers = [
   {
@@ -8,8 +9,8 @@ const tiers = [
     name: "Reserve",
     dark: true,
     bg: "sc-bg-reserve",
-    desc:
-      "Staycay Reserve is our premium tier — larger spaces, enhanced privacy, and elevated finishes. Every Reserve property is carefully selected and upgraded to meet higher design and operational standards.",
+    imgSeed: "staycay-reserve",
+    desc: "Staycay Reserve is our premium tier — larger spaces, enhanced privacy, and elevated finishes. Every Reserve property is carefully selected and upgraded to meet higher design and operational standards.",
     target: "Ideal for guests seeking a more exclusive and luxurious short-stay environment.",
     features: ["Premium furnishings", "Exclusive layouts", "Elevated guest experience"],
   },
@@ -20,8 +21,8 @@ const tiers = [
     name: "Signature",
     dark: false,
     bg: "sc-bg-cream",
-    desc:
-      "Staycay Signature represents our core design philosophy — clean lines, warm neutrals, and thoughtfully curated interiors offering comfort, calm, and a refined stay experience.",
+    imgSeed: "staycay-signature",
+    desc: "Staycay Signature represents our core design philosophy — clean lines, warm neutrals, and thoughtfully curated interiors offering comfort, calm, and a refined stay experience.",
     target: "Ideal for couples, business travellers, and modern lifestyle guests.",
     features: ["Curated interiors", "Timeless aesthetic", "Premium yet accessible"],
   },
@@ -32,8 +33,8 @@ const tiers = [
     name: "Kidz",
     dark: false,
     bg: "sc-bg-kidz",
-    desc:
-      "Staycay Kidz is curated for families. These units are designed with comfort, safety, and practicality in mind — without compromising on style.",
+    imgSeed: "staycay-kidz",
+    desc: "Staycay Kidz is curated for families. These units are designed with comfort, safety, and practicality in mind — without compromising on style.",
     target: "Perfect for family stays, group trips, and parents seeking convenience and comfort.",
     features: ["Kid-friendly layouts", "Play elements & themed touches", "Spacious living areas"],
   },
@@ -56,18 +57,16 @@ export default function Tiers() {
       <div className="sc-tiers-grid">
         {tiers.map((tier) => (
           <div key={tier.id} className={`sc-tier ${tier.bg}`}>
-            {/* Placeholder image */}
-            <div
-              className="sc-tier-img"
-              style={{
-                background: tier.dark
-                  ? "linear-gradient(160deg, #3A302A 0%, #2A2420 100%)"
-                  : tier.id === "kidz"
-                  ? "linear-gradient(160deg, #D4EDF5 0%, #BDD8E4 100%)"
-                  : "linear-gradient(160deg, #E8DDD3 0%, #D4C4B0 100%)",
-              }}
-              aria-label={`${tier.name} property — photo to be added`}
-            />
+            {/* Property photo */}
+            <div style={{ width: "100%", height: 200, position: "relative", overflow: "hidden", marginBottom: 30 }}>
+              <Image
+                src={`https://picsum.photos/seed/${tier.imgSeed}/600/400`}
+                alt={`Staycay ${tier.name} property`}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="33vw"
+              />
+            </div>
 
             <span className={`sc-tier-badge${tier.dark ? " light" : ""}`}>
               {tier.badge}

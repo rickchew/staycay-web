@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StaycayLogo from "./StaycayLogo";
 
 const footerNav = [
   { href: "/", text: "Home" },
@@ -25,17 +26,19 @@ export default function StaycayFooter() {
         <div className="row">
           {/* Brand col */}
           <div className="col-md-4 col-lg-3 mb-5 mb-md-0">
-            <Link href="/" className="sc-footer-logo">Staycay</Link>
+            <Link href="/" style={{ display: "inline-block", marginBottom: 16, textDecoration: "none" }}>
+              <StaycayLogo color="rgba(245,234,224,0.9)" size={32} variant="horizontal" />
+            </Link>
             <p className="sc-footer-tagline">
               Professional Property Management &amp; Stay Operations Platform
             </p>
             <p className="sc-footer-contact-line">
-              <strong style={{ color: "rgba(245,234,224,0.55)", fontSize: 11, letterSpacing: "0.1em" }}>E.</strong>{" "}
+              <strong style={{ color: "rgba(245,234,224,0.45)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase" }}>Email</strong>{" "}
               <a href="mailto:hello@staycay.my">hello@staycay.my</a>
             </p>
-            <p className="sc-footer-contact-line">
-              <strong style={{ color: "rgba(245,234,224,0.55)", fontSize: 11, letterSpacing: "0.1em" }}>T.</strong>{" "}
-              <a href="tel:+60">+60 — (to be updated)</a>
+            <p className="sc-footer-contact-line" style={{ marginTop: 4 }}>
+              <strong style={{ color: "rgba(245,234,224,0.45)", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase" }}>WhatsApp</strong>{" "}
+              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">+60 — (to be updated)</a>
             </p>
           </div>
 
